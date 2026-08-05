@@ -264,320 +264,35 @@
     </article>
   </div>
 </section>
-<!-- =================================FARMWORK ============================== -->
-<section id="fieldwork">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Fieldwork</div>
-        <h2>Twelve farms, one field season.</h2>
-      </div>
-      <p class="lede">
-        Underlying the Chianti Classico research were farm visits across Tuscany and the Aeolian
-        Islands with the School for Field Studies. Almost every grower, regardless of what they farm,
-        described the same three recurring problems — the lens I used to take these notes.
-      </p>
-    </div>
-
-    <div class="fw-legend reveal">
-      <span class="fw-legend-item"><i class="dot dot-soil"></i> Soil fertility</span>
-      <span class="fw-legend-item"><i class="dot dot-weed"></i> Weed control</span>
-      <span class="fw-legend-item"><i class="dot dot-pest"></i> Pest &amp; fungal management</span>
-    </div>
-
-    <div class="filter-bar reveal" id="farmFilters" role="group" aria-label="Filter farms">
-      <button class="chip active" data-filter="all">All 12</button>
-      <button class="chip" data-filter="soil"><i class="dot dot-soil"></i>Soil fertility</button>
-      <button class="chip" data-filter="weed"><i class="dot dot-weed"></i>Weed control</button>
-      <button class="chip" data-filter="pest"><i class="dot dot-pest"></i>Pest &amp; fungal</button>
-      <button class="chip" data-filter="livestock">Livestock</button>
-      <button class="chip" data-filter="no-livestock">No livestock</button>
-    </div>
-
-    <div class="farm-grid" id="farmGrid">
-
-      <details class="farm-card" data-tags="soil pest livestock">
-        <summary>
-          <span class="farm-num">01</span>
-          <span class="farm-title">
-            <h4>Regional Farm of Maremma</h4>
-            <span class="farm-meta">Public farm · 4,000 ha · Maremmana cattle &amp; horses</span>
-          </span>
-          <span class="farm-tags"><i class="dot dot-soil"></i><i class="dot dot-pest"></i></span>
-          <span class="farm-toggle">+</span>
-        </summary>
-        <ul>
-          <li>Public farm funded by taxes and cooperative investment — the largest visited, at 4,000 ha (720 arable, 650 natural pasture, 1,800 forest, 650 pine).</li>
-          <li>Runs reproductive and meat lines of Maremmana cattle, a breed said to descend from an ancient wild bovine; its Maremmano horses trace to the Etruscan period and are ridden by mounted herders (<em>butteri</em>) to manage the herd.</li>
-          <li>Butteri track lineage and genetic diversity by DNA-tagging every animal and culling aggressive bulls from breeding; pregnant cows are isolated in a "nursery" to protect calves from wolves.</li>
-          <li>Rising soil salinity from sea-level rise and historic land drainage is reducing plant diversity — the cattle graze salt-tolerant plants like Salicornia as an adaptation.</li>
-          <li>Entirely self-sufficient on forage grown within a pasture-crop rotation; water comes from wells, a windpump, solar-powered pumps, and creek flow.</li>
-          <li>A rare case of government intervention succeeding at breed conservation — the farm's model has since been referenced by organizations including the FAO.</li>
-        </ul>
-      </details>
-
-      <details class="farm-card" data-tags="soil livestock">
-        <summary>
-          <span class="farm-num">02</span>
-          <span class="farm-title">
-            <h4>Fattoria Latte Maremma</h4>
-            <span class="farm-meta">Family dairy · 28 cows · 39 ha</span>
-          </span>
-          <span class="farm-tags"><i class="dot dot-soil"></i></span>
-          <span class="farm-toggle">+</span>
-        </summary>
-        <ul>
-          <li>28 cows on 39 ha; manure is returned directly to the land in a closed-loop fertility system.</li>
-          <li>Organic carrying capacity is capped at 2 cows/ha, versus 1.4/ha under conventional EU (CAP) rules.</li>
-          <li>Water use is under half of industrial norms — 25 L/cow/day here versus roughly 60 L on industrial dairy farms.</li>
-          <li>Certified-organic rules forbid the antibiotics that high-density conventional dairies rely on, since residues can pass into the milk.</li>
-          <li>No refrigerated transport on-site; milk is pasteurized off-site at a regional Latte Maremma facility.</li>
-          <li>About 30% of income now comes from agritourism — the farm's tightest constraints are social and logistical (year-round commitment, no room for employees) more than financial.</li>
-        </ul>
-      </details>
-
-      <details class="farm-card" data-tags="soil livestock">
-        <summary>
-          <span class="farm-num">03</span>
-          <span class="farm-title">
-            <h4>Terra di Sacra</h4>
-            <span class="farm-meta">1,050 ha · Italy's first WWF Oasi · Maremmana cattle</span>
-          </span>
-          <span class="farm-tags"><i class="dot dot-soil"></i></span>
-          <span class="farm-toggle">+</span>
-        </summary>
-        <ul>
-          <li>1,050 ha total (600 cultivated), including Italy's first WWF-protected "Oasi" — a former wetland now recognized by the EU as a "Life Project."</li>
-          <li>60 Maremmana cattle on a reproductive line sold to retailers in Rome and Verona; breeding stays entirely natural (no artificial insemination) to protect the at-risk breed's genetics.</li>
-          <li>Seawater intrusion is salinizing groundwater and lowering fertility, forcing a shift to winter-only crops on a 3-year rotation (wheat, medicinal herbs, and others).</li>
-          <li>The farm deliberately avoids cross-breeding its cattle, relying instead on regional conservation payments for at-risk breeds.</li>
-          <li>Agritourism (in former sharecropper housing) coexists with the cattle without competing for land — the animals are kept partly for what they contribute to the landscape itself.</li>
-        </ul>
-      </details>
-
-      <details class="farm-card" data-tags="soil weed pest livestock">
-        <summary>
-          <span class="farm-num">04</span>
-          <span class="farm-title">
-            <h4>San Carlo Rice Paddies</h4>
-            <span class="farm-meta">480 ha, Parco della Maremma · Organic rice since the 1960s</span>
-          </span>
-          <span class="farm-tags"><i class="dot dot-soil"></i><i class="dot dot-weed"></i><i class="dot dot-pest"></i></span>
-          <span class="farm-toggle">+</span>
-        </summary>
-        <ul>
-          <li>480 ha of former marsh and pine forest inside the regional park; grows rice — unusual for Tuscany — because the clay-heavy soil holds water exceptionally well.</li>
-          <li>Organic transition follows 3 rules: no chemicals, rye-grass cover crops, and crop rotation (wheat, oat, chickpea, sunflower) — targeting the same three problems every farm on this page names: fertility, weeds, pests.</li>
-          <li>Nitrogen-fixing green manure replaces synthetic fertilizer; rice is seeded rather than transplanted to cut water use, with fields flooded twice via an underground public pipeline (roughly €30,000/year in water fees).</li>
-          <li>Grows two Italian rice varieties — a starchier Carnaroli favored in winter, a lighter variety favored in summer — and reuses the milling husk as building material or fertilizer.</li>
-          <li>70% sold wholesale to a Florence supermarket chain; the remainder sold locally to a single loyal customer.</li>
-        </ul>
-      </details>
-
-      <details class="farm-card" data-tags="pest weed no-livestock">
-        <summary>
-          <span class="farm-num">05</span>
-          <span class="farm-title">
-            <h4>Le Fonti &amp; the Panzano Transition</h4>
-            <span class="farm-meta">Village-wide shift to organic, triggered by a 2007 pest outbreak</span>
-          </span>
-          <span class="farm-tags"><i class="dot dot-pest"></i><i class="dot dot-weed"></i></span>
-          <span class="farm-toggle">+</span>
-        </summary>
-        <ul>
-          <li>A 2007 outbreak of flavescenza dorata (an insect-borne vine disease) triggered a government mandate to spray pesticides village-wide, regardless of whether a given farm was actually infected.</li>
-          <li>Panzano's growers negotiated an alternative — academic monitoring instead of blanket spraying — which ended up accelerating the village's shift to organic viticulture.</li>
-          <li>Spevis, a viticulture research station, works farm by farm rather than at scale, building a location-specific knowledge base and promoting low-input remedies like homeopathic sprays and distilled wood water.</li>
-          <li>A 2023 outbreak of peronospora (downy mildew) exposed the limits of rigid calendar-based spraying and the cost of poor information-sharing — and pushed growers toward shared distributors and price transparency.</li>
-        </ul>
-      </details>
-
-      <details class="farm-card" data-tags="soil weed no-livestock">
-        <summary>
-          <span class="farm-num">06</span>
-          <span class="farm-title">
-            <h4>Castello di Verrazzano</h4>
-            <span class="farm-meta">50 ha · High-end wine · Active soil regeneration</span>
-          </span>
-          <span class="farm-tags"><i class="dot dot-soil"></i><i class="dot dot-weed"></i></span>
-          <span class="farm-toggle">+</span>
-        </summary>
-        <ul>
-          <li>A high-value model — roughly 1 kg of fruit becomes a €60 bottle of wine — funds labor-intensive, idealistic practices most farms can't afford.</li>
-          <li>Underlying geology (schist and limestone) shifts sharply across a 250–500 m elevation change, making farm-wide soil management genuinely difficult.</li>
-          <li>Years of tilling caused erosion and falling yields; the farm has stopped tilling in most zones and is regenerating soil selectively — none at the hilltop, where thin, rocky soil already competes hard with young vines for water.</li>
-          <li>Uses zeolite rock dust to protect leaves from sun stress and wood vinegar to cut sulfur use via induced systemic resistance; copper remains the only effective treatment for one persistent fungus.</li>
-          <li>Weeds are controlled mechanically — a toothed wheel mounds soil along the vine row to smother them without hydraulic equipment.</li>
-          <li>Currently at 50% soil cover, working toward 100% for full regeneration; also scoping a "Vitiforest" agroforestry project — nitrogen-fixing, high-trunked trees to buffer wind without over-shading the vines.</li>
-        </ul>
-      </details>
-
-      <details class="farm-card" data-tags="pest soil livestock">
-        <summary>
-          <span class="farm-num">07</span>
-          <span class="farm-title">
-            <h4>Fontodi</h4>
-            <span class="farm-meta">100 ha · Chianina cattle · monoculture cover crop</span>
-          </span>
-          <span class="farm-tags"><i class="dot dot-pest"></i><i class="dot dot-soil"></i></span>
-          <span class="farm-toggle">+</span>
-        </summary>
-        <ul>
-          <li>Chianina cattle — the breed behind Florentine steak — were nearly lost to mechanization in the 1750s and were saved largely by continued market demand for the meat.</li>
-          <li>Regular breeds receive a flat EU/CAP payment; breeds classified "at risk of extinction" receive double.</li>
-          <li>Cattle here are raised mainly for manure, composted to enrich vineyard soil, rather than primarily for meat.</li>
-          <li>Copper and orange-oil extract treat a leaf fungus by drying the leaf surface; the cover crop between vine rows is currently a monoculture rather than a diverse mix.</li>
-          <li>Farm philosophy, in the grower's words: <em>"to make great wine you need great soil."</em></li>
-        </ul>
-      </details>
-
-      <details class="farm-card" data-tags="soil pest no-livestock">
-        <summary>
-          <span class="farm-num">08</span>
-          <span class="farm-title">
-            <h4>Mugello Chestnut Plantation</h4>
-            <span class="farm-meta">800 m elevation · PGI-protected · ~150-year-old trees</span>
-          </span>
-          <span class="farm-tags"><i class="dot dot-soil"></i><i class="dot dot-pest"></i></span>
-          <span class="farm-toggle">+</span>
-        </summary>
-        <ul>
-          <li>A historically poor region — slopes too steep for row-crop farming pushed chestnuts to become the local staple generations ago.</li>
-          <li>Nuts are hand-harvested (machinery scars them, making them unsellable) from trees roughly 100–150 years old; unsellable nuts are dried over chestnut-wood fires and milled into flour.</li>
-          <li>Sales are protected by a PGI (Protected Geographical Indication) designation — it sets compulsory production standards, but also invites price-gouging middlemen once nuts reach larger markets.</li>
-          <li>Ground cover is deliberately kept as moss rather than grass; cattle graze to suppress the grass, since moss retains humidity and limits erosion and weeds.</li>
-          <li>An invasive gall wasp from Vietnam was controlled by introducing a natural predator; the farm is now investigating whether reintroducing native truffle fungi could suppress ink disease, a fungus that kills chestnut trees from the top down.</li>
-          <li>Warming temperatures are pushing the viable growing altitude higher — a short-term yield boost, but a longer-term threat as the climate keeps shifting.</li>
-        </ul>
-      </details>
-
-      <details class="farm-card" data-tags="soil weed pest no-livestock">
-        <summary>
-          <span class="farm-num">09</span>
-          <span class="farm-title">
-            <h4>Fattoria di Selvoli</h4>
-            <span class="farm-meta">30 ha (+40 ha exposed) · Ancient wheat, spelt, rye</span>
-          </span>
-          <span class="farm-tags"><i class="dot dot-soil"></i><i class="dot dot-weed"></i><i class="dot dot-pest"></i></span>
-          <span class="farm-toggle">+</span>
-        </summary>
-        <ul>
-          <li>Family farm growing 4–5 ancient wheat varieties plus spelt and rye — all lower-gluten and in high demand — from seed saved on-site rather than purchased.</li>
-          <li>A 2–3 year rotation of nitrogen-fixing legumes and wheat rebuilds soil structure without any purchased fertilizer or animal manure.</li>
-          <li>Ancient grains resist most disease but remain vulnerable to a fungus that infects the grain's interior; copper is applied to seed only in wet conditions, at under 100 g/ha.</li>
-          <li>Mixing 15 wheat varieties in one field ("population" planting) spreads root depth and lets shorter plants physically brace taller ones against wind — an old-agriculture answer to lodging.</li>
-          <li>A shortened supply chain captures far more value: unprocessed wheat sells around €20/kg, but this farm's milled, packaged flour sells for up to €200/kg.</li>
-          <li>EU agri-environmental subsidies mostly favor large farms; this operation instead relies on WWOOF volunteer labor and membership in the Casentino biodistrict for informal, collective bargaining power.</li>
-        </ul>
-      </details>
-
-      <details class="farm-card" data-tags="soil no-livestock">
-        <summary>
-          <span class="farm-num">10</span>
-          <span class="farm-title">
-            <h4>Virgona Farm (Salina)</h4>
-            <span class="farm-meta">Family farm since the 1960s · 200+ tiny plots · 70 products</span>
-          </span>
-          <span class="farm-tags"><i class="dot dot-soil"></i></span>
-          <span class="farm-toggle">+</span>
-        </summary>
-        <ul>
-          <li>Farms wine grapes and capers across more than 200 small allotments scattered over the island of Salina — a legacy of historically fragmented land division.</li>
-          <li>Produces roughly 70 different products (wine, capers, beer, jams) — an unusual degree of diversification for the island, where most farms specialize narrowly.</li>
-          <li>Beer is brewed on the mainland because imported water's mineral content is inconsistent with the island's own supply; the farm is exploring an on-site brewery using purified seawater.</li>
-          <li>Not certified organic — not for lack of practices, but because the sheer number of small, irregular plots makes certification impractical and would confuse consumers with mixed labeling on the same product.</li>
-          <li>Grapes are sun-dried outdoors for 2–3 weeks to concentrate sugars; all fermentation and bottling happens on-site, with products sold direct to consumers and restaurants as far away as Australia and California.</li>
-        </ul>
-      </details>
-
-      <details class="farm-card" data-tags="soil no-livestock">
-        <summary>
-          <span class="farm-num">11</span>
-          <span class="farm-title">
-            <h4>La Macina (Lipari)</h4>
-            <span class="farm-meta">33 ha · Ancient-grain mill · 80% of the island's fresh pasta</span>
-          </span>
-          <span class="farm-tags"><i class="dot dot-soil"></i></span>
-          <span class="farm-toggle">+</span>
-        </summary>
-        <ul>
-          <li>Grows and mills ancient grain across 33 ha of mostly small, scattered plots (grain, olives, vineyard, fruit); the farm's restored mill supplies roughly 80% of the fresh pasta served in island restaurants.</li>
-          <li>Restoring and sharing that mill convinced other island farmers to start growing ancient grain themselves, since there was finally somewhere nearby to process it.</li>
-          <li>First produced beer in 2024, but — like Virgona Farm on Salina — currently brews off-island due to water-scarcity and mineral-consistency issues, with an on-site, purified-seawater brewery in the longer-term plan.</li>
-        </ul>
-      </details>
-
-      <details class="farm-card" data-tags="soil weed pest livestock">
-        <summary>
-          <span class="farm-num">12</span>
-          <span class="farm-title">
-            <h4>Podere Ruggeri</h4>
-            <span class="farm-meta">80 ha · Calvana cattle · Silvopastoral olive groves</span>
-          </span>
-          <span class="farm-tags"><i class="dot dot-soil"></i><i class="dot dot-weed"></i><i class="dot dot-pest"></i></span>
-          <span class="farm-toggle">+</span>
-        </summary>
-        <ul>
-          <li>Silvopastoral system: Calvana cattle, sheep, and goats graze directly beneath the olive canopy, naturally fertilizing the groves and keeping grass short without machinery.</li>
-          <li>Calvana is a rare local Tuscan breed, well-adapted to poor forage and steep terrain, with an estimated 300 animals left; the farm works with a university program to prevent inbreeding among the last ~10 breeders.</li>
-          <li>Two Tuscan conservation laws underpin the breed's survival: direct payments for individually tagged, verified cows, and a grower-run brand with compulsory welfare rules (minimum 8 months/year of open grazing, specific feed requirements).</li>
-          <li>Feed is 80% farm-grown cereal and legume (maize is no longer viable in the heat); the rest is purchased hay, since dry pasture alone can't fatten cattle through increasingly hot, dry summers.</li>
-          <li>Diversifies into olive oil, three types of cheese, cured meats, and a two-room agritourism stay — largely because delayed wholesale payments make direct-to-consumer sales the most reliable source of immediate cash.</li>
-          <li>Manure from cows, sheep, and goats is collected and sold on to local wine producers — closing a fertility loop between livestock and viticulture across farms.</li>
-        </ul>
-      </details>
-
-    </div>
-
-    <p class="fw-empty" id="fwEmpty" hidden="">No farms match that filter combination — try "All 12."</p>
-
-    <!-- Reference tables from original field notes -->
-    <div class="fw-tables reveal">
-      <div class="fw-table-wrap">
-        <span class="fw-table-label">Farm typologies, by main output</span>
-        <table class="fw-table">
-          <thead>
-            <tr><th></th><th>Animal products</th><th>Grapes / olives</th><th>Grain</th><th>Other</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Livestock</th>
-              <td>Regional Farm of Maremma, Fattoria Latte Maremma, Terra di Sacra, Podere Ruggeri</td>
-              <td>Fontodi, Podere Ruggeri</td>
-              <td>Terra di Sacra, Fattoria Latte Maremma, San Carlo Rice Farm</td>
-              <td>Mugello Chestnut Farm</td>
-            </tr>
-            <tr>
-              <th>No livestock</th>
-              <td>—</td>
-              <td>Le Fonti, Castello di Verrazzano, Virgona Farm (Salina)</td>
-              <td>Fattoria di Selvoli, La Macina</td>
-              <td>—</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="fw-table-wrap">
-        <span class="fw-table-label">Farms conserving an at-risk, low-input breed or grain</span>
-        <table class="fw-table">
-          <thead>
-            <tr><th></th><th>Animal breed</th><th>Grains</th><th>Other</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Natural defense</th>
-              <td>Regional Farm of Maremma, Fattoria Latte Maremma, Terra di Sacra, Fontodi</td>
-              <td>Fattoria di Selvoli, La Macina</td>
-              <td>Mugello Chestnut Farm</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</section>
   
+    <!-- ============================== FARM RESOURCE MANAGEMENT ============================== -->
+    <section id="farm-directory">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Fieldwork · Farm resource management</div>
+            <h2>Interactive farm directory</h2>
+            <p style="color: var(--ink-soft); max-width: 600px; margin-top: 0.4rem;">Twelve farms visited in Tuscany, Liguria, and the islands — practices, challenges, and adaptations.</p>
+          </div>
+          <span style="font-size: 0.8rem; color: var(--ink-soft); font-family: var(--f-mono);">SFS Italy 2025</span>
+        </div>
+
+        <!-- filter bar -->
+        <div class="farm-filter-bar" id="filterBar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="organic">Organic</button>
+          <button class="filter-btn" data-filter="biodynamic">Biodynamic / integrated</button>
+          <button class="filter-btn" data-filter="ancient-grains">Ancient grains</button>
+          <button class="filter-btn" data-filter="breed-conservation">Breed conservation</button>
+          <button class="filter-btn" data-filter="agritourism">Agritourism</button>
+          <button class="filter-btn" data-filter="silvopastoral">Silvopastoral</button>
+          <button class="filter-reset" id="resetFilters">⟲ reset</button>
+        </div>
+
+        <!-- grid -->
+        <div class="farm-grid" id="farmGrid"></div>
+      </div>
+    </section>
 
 <!-- ============================== SKILLS ============================== -->
 <section id="skills">
