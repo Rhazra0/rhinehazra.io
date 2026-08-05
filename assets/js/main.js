@@ -29,43 +29,10 @@ if ('IntersectionObserver' in window && revealEls.length) {
 } else {
   revealEls.forEach(el => el.classList.add('in'));
 }
-
-// Mobile nav toggle
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('open'));
-  });
-}
-
-// Scroll-reveal for elements with .reveal
-const revealEls = document.querySelectorAll('.reveal');
-if ('IntersectionObserver' in window && revealEls.length) {
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0, rootMargin: '0px 0px -5% 0px' });
-  revealEls.forEach(el => io.observe(el));
-  // safety net: never leave content permanently invisible
-  window.addEventListener('load', () => {
-    setTimeout(() => revealEls.forEach(el => el.classList.add('in')), 1500);
-  });
-} else {
-  revealEls.forEach(el => el.classList.add('in'));
-}
-
 // =========================================================================
 // Farm Directory — Interactive filtering
 // =========================================================================
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
   const farms = [
     {
       name: "Regional Farm of Maremma",
@@ -167,10 +134,11 @@ if ('IntersectionObserver' in window && revealEls.length) {
 
   const grid = document.getElementById('farmGrid');
   const filterBar = document.getElementById('filterBar');
-  let activeFilter = 'all';
+
+  // If the farm section doesn't exist on this page, exit early
+  if (!grid || !filterBar) return;
 
   function render(filter = 'all') {
-    if (!grid) return;
     const filtered = filter === 'all' ? farms : farms.filter(f => f.filters.includes(filter));
     if (filtered.length === 0) {
       grid.innerHTML = `<div class="no-farms">No farms match this filter. Try another category.</div>`;
@@ -196,29 +164,28 @@ if ('IntersectionObserver' in window && revealEls.length) {
   }
 
   function setActiveFilter(filter) {
-    activeFilter = filter;
+    // Update button states
     const btns = document.querySelectorAll('.filter-btn');
     btns.forEach(btn => {
       btn.classList.toggle('active', btn.dataset.filter === filter);
     });
+    // Render the filtered farms
     render(filter);
   }
 
-  if (filterBar) {
-    filterBar.addEventListener('click', (e) => {
-      const btn = e.target.closest('.filter-btn');
-      if (btn) {
-        setActiveFilter(btn.dataset.filter);
-      }
-      if (e.target.id === 'resetFilters') {
-        setActiveFilter('all');
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
-        if (allBtn) allBtn.classList.add('active');
-      }
-    });
-  }
+  // Event listener for filter buttons
+  filterBar.addEventListener('click', function(e) {
+    const btn = e.target.closest('.filter-btn');
+    if (btn) {
+      const filter = btn.dataset.filter;
+      setActiveFilter(filter);
+    }
+    // Handle reset button
+    if (e.target.id === 'resetFilters' || e.target.closest('#resetFilters')) {
+      setActiveFilter('all');
+    }
+  });
 
   // Initial render
   render('all');
-})();
+});
